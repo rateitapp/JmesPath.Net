@@ -31,4 +31,4 @@ jobs:
         run: dotnet pack "src\jmespath.net" -c Release -o out --no-dependencies -p:Version=1.0.126
 
       - name: Push generated package to GitHub registry
-        run: dotnet nuget push "src\jmespath.net\out\jmespath.net.1.0.126.nupkg" --skip-duplicate --no-symbols true
+        run: dotnet nuget push "out\*.nupkg" --skip-duplicate --no-symbols true
