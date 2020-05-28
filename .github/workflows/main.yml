@@ -26,5 +26,8 @@ jobs:
       - name: Build solution and generate NuGet package
         run: dotnet pack "src\jmespath.net" -c Release -o out --no-dependencies -p:Version=1.0.126
 
-      - name: Push generated package to GitHub registry
-        run: dotnet nuget push "out\*.nupkg"--source "https://nuget.pkg.github.com/rateitapp/index.json" --api-key "${{secrets.GITHUB_TOKEN}}" --skip-duplicate --no-symbols true 
+      - shell: pwsh
+        name: Push generated package to GitHub registry
+        env:
+          ACCESS_TOKEN_ENV: ${{secrets.ACCESS_TOKEN}}
+        run: dotnet nuget push "out\*.nupkg"--source "https://nuget.pkg.github.com/rateitapp/index.json" --api-key "$env:ACCESS_TOKEN_ENV" --skip-duplicate --no-symbols true 
