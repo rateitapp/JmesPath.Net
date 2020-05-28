@@ -27,8 +27,8 @@ jobs:
 
       - name: Build solution and generate NuGet package
         run: |  
-          cd jmespath.net
+          cd ./src/jmespath.net
           dotnet pack -c Release -o out --no-dependencies -p:Version=1.0.126
 
       - name: Push generated package to GitHub registry
-        run: dotnet nuget push ./jmespath.net/out/*.nupkg --skip-duplicate --no-symbols true
+        run: dotnet nuget push ./src/jmespath.net/out/*.nupkg --skip-duplicate --no-symbols true
