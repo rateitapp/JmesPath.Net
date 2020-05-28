@@ -10,6 +10,7 @@
     <PackageTags>jmespath;json</PackageTags>
     <PackageProjectUrl>https://github.com/jdevillard/JmesPath.Net</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/jdevillard/JmesPath.Net/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/rateitapp/JmesPath.Net</RepositoryUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
